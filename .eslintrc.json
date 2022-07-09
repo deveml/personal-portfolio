@@ -6,8 +6,9 @@
   "extends": [
     "plugin:react/recommended",
     "airbnb",
+    "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:@typescript-eslint/eslint-recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -52,7 +53,12 @@
       "error",
       { "namedComponents": "arrow-function" }
     ],
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_" }
+    ]
   },
   "settings": {
     "import/resolver": {

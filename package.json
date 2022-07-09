@@ -6,7 +6,10 @@
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.8.2",
+    "@storybook/react": "^6.5.9",
     "@testing-library/jest-dom": "^5.16.4",
+    "dexie": "^3.2.2",
+    "dexie-react-hooks": "^1.1.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
@@ -14,6 +17,15 @@
     "typesafe-i18n": "^5.5.2"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/node-logger": "^6.5.9",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/testing-library": "^0.0.13",
     "@testing-library/react": "13.3.0",
     "@testing-library/user-event": "13.5.0",
     "@types/jest": "27.5.1",
@@ -22,6 +34,7 @@
     "@types/react-dom": "18.0.5",
     "@typescript-eslint/eslint-plugin": "5.26.0",
     "@typescript-eslint/parser": "5.26.0",
+    "babel-plugin-named-exports-order": "^0.0.2",
     "eslint": "8.16.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-import-resolver-typescript": "2.7.1",
@@ -29,8 +42,11 @@
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-react": "7.30.0",
     "eslint-plugin-react-hooks": "4.5.0",
+    "eslint-plugin-storybook": "^0.5.13",
     "npm-run-all": "^4.1.5",
-    "typescript": "^4.7.2"
+    "prop-types": "^15.8.1",
+    "typescript": "^4.7.2",
+    "webpack": "^5.73.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -40,7 +56,9 @@
     "git-cz": "git-cz",
     "lint": "eslint --fix 'src/**/*{.tsx,ts,js}'",
     "typesafe-i18n": "typesafe-i18n",
-    "dev": "npm-run-all --parallel start typesafe-i18n"
+    "dev": "npm-run-all --parallel start typesafe-i18n",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "browserslist": {
     "production": [
@@ -58,5 +76,17 @@
     "commitizen": {
       "path": "git-cz"
     }
+  },
+  "eslintConfig": {
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
   }
 }
