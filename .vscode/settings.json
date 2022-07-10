@@ -16,5 +16,7 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "typescript.tsdk": "node_modules/typescript/lib",
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "reactSnippets.settings.importReactOnTop": true,
+  "reactSnippets.settings.typescript": true
 }

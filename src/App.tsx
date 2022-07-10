@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import React from 'react';
-import { StyledTerminalInput } from './components/Terminal/TerminalInput';
+import { StyledTerminalInput } from './components/terminal/TerminalInput';
 
 const App = () => (
   <Box>

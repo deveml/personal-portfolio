@@ -2,12 +2,12 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 
 import { Meta } from '@storybook/react';
-import { StyledTerminalInput } from '../TerminalInput';
 import { StorybookWrapper } from '../../StorybookWrapper';
+import { ITerminalInputProps, StyledTerminalInput } from '../TerminalInput';
 
-export const TerminalInputComponent = () => (
+export const TerminalInputComponent = (args: ITerminalInputProps) => (
   <StorybookWrapper>
-    <StyledTerminalInput onChange={(text) => action(`The text content is ${text}`)} />
+    <StyledTerminalInput {...args} onChange={(text) => action(`Text change: ${text}`)} />
   </StorybookWrapper>
 );
 
