@@ -4,7 +4,7 @@ import './index.css';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import App from './App';
 import { themeConfig } from './config/theme';
-import TypesafeI18n from './i18n/locale/i18n-react';
+import { LocaleWrapper } from './LocaleWrapper';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -12,11 +12,11 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <TypesafeI18n locale="en">
+    <LocaleWrapper>
       <ThemeProvider theme={themeConfig}>
         <CssBaseline />
         <App />
       </ThemeProvider>
-    </TypesafeI18n>
+    </LocaleWrapper>
   </React.StrictMode>,
 );

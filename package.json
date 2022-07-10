@@ -7,6 +7,7 @@
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.8.2",
     "@storybook/react": "^6.5.9",
+    "@storybook/addon-actions": "^6.5.9",
     "@testing-library/jest-dom": "^5.16.4",
     "dexie": "^3.2.2",
     "dexie-react-hooks": "^1.1.1",
@@ -17,7 +18,6 @@
     "typesafe-i18n": "^5.5.2"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
     "@storybook/addon-links": "^6.5.9",
@@ -60,7 +60,8 @@
     "lint": "eslint --fix 'src/**/*{.tsx,ts,js}'",
     "typesafe-i18n": "typesafe-i18n",
     "dev": "npm-run-all --parallel start typesafe-i18n",
-    "storybook": "start-storybook -p 6006 -s public",
+    "start-storybook": "start-storybook -p 6006 -s public",
+    "storybook": "npm-run-all --parallel start-storybook typesafe-i18n",
     "build-storybook": "build-storybook -s public",
     "prepare": "husky install"
   },
