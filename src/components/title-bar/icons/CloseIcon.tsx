@@ -1,18 +1,17 @@
 import React from 'react';
-import { useTheme } from '@mui/material';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import { Icon } from './Icon';
 import { IIconProps } from './interfaces';
+import { themeConfig } from '../../../config/theme';
 
 export const CloseIcon = (props: IIconProps) => {
-  const { height = '1rem', width = '1rem' } = props;
-  const theme = useTheme();
+  const { height = '0.5rem', width = '0.5rem' } = props;
   return (
     <Icon
       height={height}
       width={width}
-      backgroundColor={theme.palette.green.light}
-      backgroundColorOnHover={theme.palette.green.dark}
+      backgroundColor={themeConfig.palette.red.main}
+      backgroundColorOnHover={themeConfig.palette.red.dark}
       icon={<CloseRoundedIcon />}
     />
   );

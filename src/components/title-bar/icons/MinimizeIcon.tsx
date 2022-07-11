@@ -1,19 +1,17 @@
 import React from 'react';
-import { useTheme } from '@mui/material';
-import MinimizeRoundedIcon from '@mui/icons-material/MinimizeRounded';
-import { Icon } from './Icon';
+import CloseFullscreenRoundedIcon from '@mui/icons-material/CloseFullscreenRounded'; import { Icon } from './Icon';
 import { IIconProps } from './interfaces';
+import { themeConfig } from '../../../config/theme';
 
 export const MinimizeIcon = (props: IIconProps) => {
-  const { height = '1rem', width = '1rem' } = props;
-  const theme = useTheme();
+  const { height = '0.5rem', width = '0.5rem' } = props;
   return (
     <Icon
       height={height}
       width={width}
-      backgroundColor={theme.palette.yellow.light}
-      backgroundColorOnHover={theme.palette.yellow.dark}
-      icon={<MinimizeRoundedIcon />}
+      backgroundColor={themeConfig.palette.yellow.main}
+      backgroundColorOnHover={themeConfig.palette.yellow.dark}
+      icon={<CloseFullscreenRoundedIcon />}
     />
   );
 };

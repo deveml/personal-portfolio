@@ -31,12 +31,18 @@ const paletteConfig: PaletteOptions = {
   },
   green: {
     main: '#00FF0A',
+    light: '#31ff53',
+    dark: '#185f24',
   },
   red: {
     main: '#FF5C00',
+    light: '#ffa1aa',
+    dark: '#8e360b',
   },
   yellow: {
     main: '#FFE600',
+    light: '#f4f174',
+    dark: '#9f900d',
   },
   orange: {
     main: '#FF5C00',

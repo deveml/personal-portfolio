@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { CssBaseline, ThemeProvider } from '@mui/material';
+import { CssBaseline, StyledEngineProvider, ThemeProvider } from '@mui/material';
 import App from './App';
 import { themeConfig } from './config/theme';
 import { LocaleWrapper } from './LocaleWrapper';
@@ -13,10 +13,12 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <LocaleWrapper>
-      <ThemeProvider theme={themeConfig}>
-        <CssBaseline />
-        <App />
-      </ThemeProvider>
+      <StyledEngineProvider injectFirst>
+        <ThemeProvider theme={themeConfig}>
+          <CssBaseline />
+          <App />
+        </ThemeProvider>
+      </StyledEngineProvider>
     </LocaleWrapper>
   </React.StrictMode>,
 );
